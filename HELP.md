@@ -17,3 +17,9 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 * [Accessing Data with MongoDB](https://spring.io/guides/gs/accessing-data-mongodb/)
 
+
+### Help Errors:
+
+"Identify and stop the process that's listening on port 8080 or configure this application to listen on another port."
+- ```netstat -ano | findstr 8080 - This checks for the port number in use```
+- ```taskkill /F /pid <pid outputted> - This kills the process freeing up the port```
