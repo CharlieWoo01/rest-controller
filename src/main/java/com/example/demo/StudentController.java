@@ -29,19 +29,19 @@ public class StudentController {
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
-    @GetMapping("/add")
+    @PostMapping("/add")
     public ResponseEntity<Student> addStudent(@RequestBody Student student) {
         Student newStudent = studentService.addStudent(student);
         return new ResponseEntity<>(newStudent, HttpStatus.CREATED);
     }
 
-    @GetMapping("update")
+    @PutMapping("update")
     public ResponseEntity<Student> updateStudent(@RequestBody Student student) {
         Student updateStudent = studentService.updateStudent(student);
         return new ResponseEntity<>(updateStudent, HttpStatus.OK);
     }
 
-    @GetMapping("delete/{id}")
+    @DeleteMapping("delete/{id}")
     public ResponseEntity<?> deleteStudent(@PathVariable("id") String id) {
         studentService.deleteEmployee(id);
         return new ResponseEntity<>(HttpStatus.OK);
